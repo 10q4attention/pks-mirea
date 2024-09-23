@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/device.dart';
 
 class DevicePage extends StatelessWidget {
-  final DropSliderValueIndicatorShape device;
+  final Device device;
 
   const DevicePage({super.key, required this.device});
 
@@ -71,8 +71,7 @@ class DevicePage extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {
-                      },
+                      onPressed: () {},
                       style: ElevatedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(vertical: 16),
                       ),
