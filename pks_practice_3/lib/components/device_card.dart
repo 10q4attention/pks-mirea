@@ -10,6 +10,7 @@ class DeviceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: const Color(0xFF424242), 
       elevation: 4,
       margin: const EdgeInsets.all(16),
       child: InkWell(
@@ -42,6 +43,7 @@ class DeviceCard extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
+                      color: Colors.white, 
                     ),
                   ),
                   const SizedBox(height: 4),
@@ -49,16 +51,16 @@ class DeviceCard extends StatelessWidget {
                     device.category,
                     style: const TextStyle(
                       fontSize: 14,
-                      color: Colors.grey,
+                      color: Colors.grey, 
                     ),
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    '\$${device.price}',
+                    '${device.price} ₽',
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: Colors.green,
+                      color: Colors.white, 
                     ),
                   ),
                   const SizedBox(height: 4),
