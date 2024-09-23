@@ -1,4 +1,4 @@
-<img width="1512" alt="image" src="https://github.com/user-attachments/assets/4f93051c-acb4-4be8-a5cc-d99bffaa55f0">### 3 ПРАКТИКА 
+### 3 ПРАКТИКА 
 ## Молчанов Иван
 
 ## Главная страница
