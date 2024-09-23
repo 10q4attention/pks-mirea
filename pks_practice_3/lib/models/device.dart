@@ -7,6 +7,6 @@ class Device {
   final String imageUrl;
   final int price;
 
-  Device(this.id, this.description, this.quantity, this.category, this.title,this.price,this.imageUrl);
-
+  Device(this.id, this.description, this.quantity, this.category, this.title,
+      this.price, this.imageUrl);
 }
