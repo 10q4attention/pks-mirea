@@ -31,7 +31,7 @@ final List<Device> devices = [
       'Gorenje NRK6202AXL4', 32000, 'https://img.mvideo.ru/Big/20072561bb.jpg'),
   Device(
       7,
-      'Очень хороший телефон',
+      'Стильный и вместительный холодильник',
       3,
       'Холодильники',
       'Холодильник Candy CCRN 6180S ',
@@ -39,7 +39,7 @@ final List<Device> devices = [
       'https://img.mvideo.ru/Big/20070161bb.jpg'),
   Device(
       8,
-      'Очень хороший телефон',
+      'Стильный и вместительный холодильник',
       19,
       'Холодильники',
       'Холодильник Hisense RS840N4AIF',
@@ -47,7 +47,7 @@ final List<Device> devices = [
       'https://img.mvideo.ru/Pdb/400161108b.jpg'),
   Device(
       9,
-      'Очень хороший телефон',
+      'Стильный и вместительный холодильник',
       11,
       'Холодильники',
       'Холодильник Hotpoint HT 9201I W O3',
@@ -55,7 +55,7 @@ final List<Device> devices = [
       'https://img.mvideo.ru/Big/400258219bb.jpg'),
   Device(
       10,
-      'Очень хороший телефон',
+      'Стильный и вместительный холодильник',
       1,
       'Холодильники',
       'Холодильник Gorenje NRK6202AC4',
