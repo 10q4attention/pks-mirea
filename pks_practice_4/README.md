@@ -1,16 +1,9 @@
-# pks_practice_3
+## Практика № 4
 
-A new Flutter project.
+### Молчанов Иван
 
-## Getting Started
+<img width="1507" alt="image" src="https://github.com/user-attachments/assets/80085956-3f17-4bd7-a29d-9484c1047b76">
 
-This project is a starting point for a Flutter application.
+<img width="1508" alt="image" src="https://github.com/user-attachments/assets/06c94b99-afaa-4de0-a641-068744c50274">
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/5dccf692-f412-4dcc-9895-0aecc021b11d">
