@@ -72,29 +72,49 @@ final List<Device> devices = [
 ];
 
 class _MainPageState extends State<MainPage> {
+  void _addDevice(Device device) {
+    setState(() {
+      devices.add(device);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Товары'),
+        title: const Center(
+          child: Text(
+            'Товары',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 28,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ),
+        backgroundColor: Colors.black,
       ),
       backgroundColor: const Color(0xFFF5DEB3),
-      body: ListView.builder(
-        itemCount: devices.length,
-        itemBuilder: (BuildContext context, int index) {
-          return DeviceCard(device: devices[index]);
-        },
-      ),
+      body: devices.isEmpty
+          ? const Center(child: SizedBox()) // Убираем сообщение
+          : GridView.builder(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: 0.6,
+                mainAxisSpacing: 16.0,
+                crossAxisSpacing: 16.0,
+              ),
+              itemCount: devices.length,
+              itemBuilder: (BuildContext context, int index) {
+                return DeviceCard(device: devices[index]);
+              },
+            ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => AddDevicePage(onAddDevice: (newItem) {
-                setState(() {
-                  devices.add(newItem);
-                });
-              }),
+              builder: (context) => AddDevicePage(onAddDevice: _addDevice),
             ),
           );
         },
