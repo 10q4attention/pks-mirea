@@ -2,17 +2,23 @@ import 'package:flutter/material.dart';
 import '../pages/device_page.dart';
 import '../models/device.dart';
 
-class DeviceCard extends StatefulWidget {
-  final Device device;
 
-  const DeviceCard({super.key, required this.device});
+ class DeviceCard extends StatefulWidget {
+  final Device device;
+  final Function(Device) onFavoriteToggle; 
+
+  const DeviceCard({
+    super.key,
+    required this.device,
+    required this.onFavoriteToggle, 
+  });
 
   @override
   _DeviceCardState createState() => _DeviceCardState();
 }
 
 class _DeviceCardState extends State<DeviceCard> {
-  bool isFavorite = false; 
+  bool isFavorite = false;
 
   @override
   Widget build(BuildContext context) {
@@ -33,13 +39,13 @@ class _DeviceCardState extends State<DeviceCard> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AspectRatio(
-              aspectRatio: 3 / 3, 
+              aspectRatio: 3 / 3,
               child: Image.network(
                 widget.device.imageUrl,
-                fit: BoxFit.cover, 
+                fit: BoxFit.cover,
               ),
             ),
-            const SizedBox(height: 8), 
+            const SizedBox(height: 8),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Column(
@@ -53,19 +59,19 @@ class _DeviceCardState extends State<DeviceCard> {
                       color: Colors.white,
                     ),
                     overflow: TextOverflow.ellipsis,
-                    maxLines: 1, 
+                    maxLines: 1,
                   ),
-                  const SizedBox(height: 2), 
+                  const SizedBox(height: 2),
                   Text(
                     widget.device.category,
                     style: const TextStyle(
                       fontSize: 14,
                       color: Colors.grey,
                     ),
-                    overflow: TextOverflow.ellipsis, 
+                    overflow: TextOverflow.ellipsis,
                     maxLines: 1,
                   ),
-                  const SizedBox(height: 4), 
+                  const SizedBox(height: 4),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -84,7 +90,8 @@ class _DeviceCardState extends State<DeviceCard> {
                         ),
                         onPressed: () {
                           setState(() {
-                            isFavorite = !isFavorite; 
+                            isFavorite = !isFavorite;
+                            widget.onFavoriteToggle(widget.device); 
                           });
                         },
                       ),

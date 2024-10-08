@@ -4,7 +4,9 @@ import '../components/device_card.dart';
 import '../pages/add_device_page.dart';
 
 class MainPage extends StatefulWidget {
-  const MainPage({super.key});
+  final Function(Device) onFavoriteToggle; 
+
+  const MainPage({super.key, required this.onFavoriteToggle});
 
   @override
   _MainPageState createState() => _MainPageState();
@@ -31,7 +33,7 @@ final List<Device> devices = [
       'Gorenje NRK6202AXL4', 32000, 'https://img.mvideo.ru/Big/20072561bb.jpg'),
   Device(
       7,
-      'Очень хороший телефон',
+      'Стильный и вместительный холодильник',
       3,
       'Холодильники',
       'Холодильник Candy CCRN 6180S ',
@@ -39,7 +41,7 @@ final List<Device> devices = [
       'https://img.mvideo.ru/Big/20070161bb.jpg'),
   Device(
       8,
-      'Очень хороший телефон',
+      'Стильный и вместительный холодильник',
       19,
       'Холодильники',
       'Холодильник Hisense RS840N4AIF',
@@ -47,7 +49,7 @@ final List<Device> devices = [
       'https://img.mvideo.ru/Pdb/400161108b.jpg'),
   Device(
       9,
-      'Очень хороший телефон',
+      'Стильный и вместительный холодильник',
       11,
       'Холодильники',
       'Холодильник Hotpoint HT 9201I W O3',
@@ -55,7 +57,7 @@ final List<Device> devices = [
       'https://img.mvideo.ru/Big/400258219bb.jpg'),
   Device(
       10,
-      'Очень хороший телефон',
+      'Стильный и вместительный холодильник',
       1,
       'Холодильники',
       'Холодильник Gorenje NRK6202AC4',
@@ -96,7 +98,7 @@ class _MainPageState extends State<MainPage> {
       ),
       backgroundColor: const Color(0xFFF5DEB3),
       body: devices.isEmpty
-          ? const Center(child: SizedBox()) // Убираем сообщение
+          ? const Center(child: SizedBox()) 
           : GridView.builder(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
@@ -106,7 +108,10 @@ class _MainPageState extends State<MainPage> {
               ),
               itemCount: devices.length,
               itemBuilder: (BuildContext context, int index) {
-                return DeviceCard(device: devices[index]);
+                return DeviceCard(
+                  device: devices[index],
+                  onFavoriteToggle: widget.onFavoriteToggle,
+                );
               },
             ),
       floatingActionButton: FloatingActionButton(

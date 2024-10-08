@@ -1,6 +1,7 @@
+import 'models/device.dart';
 import 'package:flutter/material.dart';
 import '../pages/main_page.dart';
-import '../pages/favourite_page.dart';
+import '../pages/favorite_page.dart';
 import '../pages/profile_page.dart';
 
 void main() {
@@ -33,12 +34,29 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int index = 0;
+  List<Device> favoriteDevices = []; 
 
-  final List<Widget> _pages = [
-    const MainPage(),
-    const FavouritePage(),
-    const ProfilePage(),
-  ];
+  final List<Widget> _pages = [];
+
+  @override
+  void initState() {
+    super.initState();
+    _pages.addAll([
+      MainPage(onFavoriteToggle: _toggleFavorite), 
+      FavouritePage(favoriteDevices: favoriteDevices),
+      const ProfilePage(),
+    ]);
+  }
+
+  void _toggleFavorite(Device device) {
+    setState(() {
+      if (favoriteDevices.contains(device)) {
+        favoriteDevices.remove(device); 
+      } else {
+        favoriteDevices.add(device); 
+      }
+    });
+  }
 
   void onItemTapped(int i) {
     setState(() {
