@@ -15,3 +15,5 @@
 * [pks_practice_5](pks_practice_5/README.md)
 
 * [pks_practice_6](pks_practice_6/README.md)
+
+* [pks_practice_7](pks_practice_7/README.md)
