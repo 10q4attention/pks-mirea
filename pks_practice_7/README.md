@@ -1,16 +1,14 @@
-# pks_practice_3
+## Практика 7
 
-A new Flutter project.
+## Молчанов Иван ЭФБО-01-22
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+![telegram-cloud-photo-size-2-5240067157654628761-y](https://github.com/user-attachments/assets/ff256bc5-c70f-4791-9d36-dce5d690908a)
 
-A few resources to get you started if this is your first Flutter project:
+![telegram-cloud-photo-size-2-5240067157654628762-y](https://github.com/user-attachments/assets/f5ed17c2-b02e-4aec-972d-6ee0d7594c32)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![telegram-cloud-photo-size-2-5240067157654628763-y](https://github.com/user-attachments/assets/7d88f93c-c99f-4067-81ea-e33d398cd6d5)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![telegram-cloud-photo-size-2-5240067157654628765-y](https://github.com/user-attachments/assets/250df056-bc59-40e3-a6a1-6f69c623806b)
+
+
