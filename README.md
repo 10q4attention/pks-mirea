@@ -17,3 +17,5 @@
 * [pks_practice_6](pks_practice_6/README.md)
 
 * [pks_practice_7](pks_practice_7/README.md)
+
+* [pks_practice_8](pks_practice_8/README.md)
